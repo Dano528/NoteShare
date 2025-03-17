@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 body {
     display: flex;
@@ -24,7 +24,7 @@ a:link {
 header,
 main,
 footer,
-table{
+table {
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -55,6 +55,17 @@ h4 {
     margin-inline: auto;
 }
 
+h1
+{
+    display: inline-flex;
+    align-items: center;
+}
+h1 > img
+{
+    height: 45px;
+    margin-left: 10px;
+}
+
 h4 {
     font-weight: normal;
     padding: 5px 10px;
@@ -79,9 +90,12 @@ menu {
 }
 
 
-menu a, menu a:visited, menu a:hover, menu a:active {
-    color: white; 
-    text-decoration: none; 
+menu a,
+menu a:visited,
+menu a:hover,
+menu a:active {
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -121,7 +135,7 @@ input {
     margin-inline: auto;
 }
 
-form{
+form {
     border: 1px black solid;
     padding: 10px;
     border-radius: 20px;
@@ -129,14 +143,14 @@ form{
     flex-direction: column;
     text-align: left;
 }
-form > input
-{
+
+form>input {
     width: auto;
     margin-block: 10px;
     margin-inline: 10px;
 }
 
-form > input[type=submit] {
+form>input[type=submit] {
     cursor: pointer;
 }
 
@@ -146,7 +160,7 @@ form > input[type=submit] {
     cursor: pointer;
 }
 
-#menubar{
+#menubar {
     visibility: hidden;
     width: 0;
 }
@@ -178,4 +192,25 @@ form > input[type=submit] {
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
+}
+
+table,
+th,
+td 
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #c1c2be;
+}
+
+table {
+    margin-block: 20px;
+}
+
+thead {
+    font-weight: bold;
 }

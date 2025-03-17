@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes | NoteShare!</title>
+    <title>Uploader | NoteShare!</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
-    <!-- Sidebar Menu -->
     <menu>
         <div id="menubar">
             <p class="user"><span id="nome_menu"></span></p>
@@ -26,9 +24,7 @@
         </div>
     </menu>
 
-    <!-- Page content -->
     <div>
-
         <header>
             <a href="index.html">
                 <h1>
@@ -36,24 +32,23 @@
                     <img src="assets/img/logo.png" alt="Logo">
                 </h1>
             </a>
-            <h4>Notes</h4>
+            <h4>Uploader</h4>
         </header>
 
         <main>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search your notes...">
-            </div>
-
-            <div class="container">
-                <div><a href="visualizzatore.html">Note 1</a></div>
-                <div><a href="visualizzatore.html">Note 2</a></div>
-                <div><a href="visualizzatore.html">Note 3</a></div>
-                <div><a href="visualizzatore.html">Note 4</a></div>
-                <div><a href="visualizzatore.html">Note 5</a></div>
-                <div><a href="visualizzatore.html">Note 6</a></div>
-            </div>
-
+            <form action="lezioni.html">
+                <label for="Teacher">Teachers:</label>
+                <select name="Teacher" id="Teacher">
+                    <option value="Tutti">All</option>
+                    <option value="Teacher1">Teacher1</option>
+                    <option value="Teacher2">Teacher2</option>
+                    <option value="Teacher3">Teacher3</option>
+                    <option value="Teacher4">Teacher4</option>
+                    <option value="Teacher5">Teacher5</option>
+                </select>
+                <input type="file">
+                <input type="submit">
+            </form>
         </main>
 
         <footer>
@@ -65,5 +60,4 @@
     <script src="assets/JavaScript/main.js"></script>
 
 </body>
-
 </html>
