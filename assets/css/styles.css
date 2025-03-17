@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
 body {
     display: flex;
     margin: 0;
     background-color: #ebece7;
     color: #305778;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    /* font-family: "Comic Sans MS", "Comic Sans"; */
     transition: all 2s;
     height: 100vh;
+    font-family: "Comic Neue", cursive;
+    /* font-weight: 700;
+    font-style: normal; */
 }
 
 body>div {
@@ -92,7 +97,7 @@ div.columns {
 button {
     color: #305778;
     font-weight: bold;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Neue", cursive;
     border: 2.5px solid rgb(49, 83, 125);
     border-radius: 10px;
     padding: 20px 10px;
@@ -109,7 +114,7 @@ input {
     width: 45%;
     color: #305778;
     font-weight: bold;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Neue", cursive;
     padding: 10px;
     border-radius: 30px;
     border: 2px solid #305778;
