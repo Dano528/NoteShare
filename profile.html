@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | NoteShare!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <menu>
+        <div id="menubar">
+            <p class="utente"><span id="nome_menu"></span></p>
+            <ul>
+                <li><a href="lezioni.html">Lessons</a></li>
+                <li><a href="preferiti.html">Favorites</a></li>
+                <li><a href="login.html">Account</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p id="hamburger">☰</p>
+        </div>
+    </menu>
+
+    <div>
+
+        <header>
+            <a href="/">
+                <h1>NoteShare!</h1>
+            </a>
+            <h4>Profile</h4>
+        </header>
+
+        <main>
+
+            <img src="https://static.vecteezy.com/system/resources/previews/036/280/651/large_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg"
+                alt="Profile Picture" height="100px" style="border-radius: 50px;">
+            <p>First Name: 
+                <span id="nome"></span>
+            </p>
+
+            <p>Last Name: 
+                <span id="cognome"></span>
+            </p>
+            <p>Class: 
+                <span id="classe"></span>
+            </p>
+            <button onclick="logout()">Log out</button>
+
+        </main>
+
+        <footer>
+            Created with Love by Daniel, Giovanni, and Loris
+        </footer>
+
+    </div>
+
+    <script src="assets/JavaScript/main.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get('nome');
+        const cognome = urlParams.get('cognome');
+        const classe = urlParams.get('classe');
+        const email = urlParams.get('email');
+        const password = urlParams.get('password');
+
+        document.getElementById("nome").innerHTML = nome;
+        document.getElementById("cognome").innerHTML = cognome;
+        document.getElementById("classe").innerHTML = classe;
+        console.log(nome, cognome, classe);
+
+        localStorage.setItem("nome", nome);
+        localStorage.setItem("cognome", cognome);
+        localStorage.setItem("classe", classe);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>

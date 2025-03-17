@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NoteShare!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <form id="loginForm" action="profile.html" method="get">
+            <label for="nome">First Name</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="cognome">Last Name</label>
+            <input type="text" name="cognome" id="cognome">
+
+            <label for="classe">Class</label>
+            <select name="classe" id="classe">
+                <option value="1INF1">1 INF 1</option>
+                <option value="1INF2">1 INF 2</option>
+                <option value="1INF3">1 INF 3</option>
+                <option value="1INF4">1 INF 4</option>
+                <option value="1INF5">1 INF 5</option>
+                <option value="2INF1">2 INF 1</option>
+                <option value="2INF2">2 INF 2</option>
+                <option value="2INF3">2 INF 3</option>
+                <option value="2INF4">2 INF 4</option>
+                <option value="3INF1">3 INF 1</option>
+                <option value="3INF2">3 INF 2</option>
+                <option value="3INF3">3 INF 3</option>
+                <option value="3INF4">3 INF 4</option>
+                <option value="4INF1">4 INF 1</option>
+                <option value="4INF2">4 INF 2</option>
+                <option value="4INF3">4 INF 3</option>
+                <option value="4INF4">4 INF 4</option>
+                <option value="5INF1">5 INF 1</option>
+                <option value="5INF2">5 INF 2</option>
+                <option value="5INF3">5 INF 3</option>
+            </select>
+
+            <label for="email">E-mail *</label>
+            <input type="email" name="email" id="email" required>
+            <span id="email-error" class="error-message"></span>
+
+            <label for="password">Password *</label>
+            <input type="password" name="password" id="password" required>
+            <span id="password-error" class="error-message"></span>
+
+            <input type="submit" value="Login">
+        </form>
+    </main>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const nomeInput = document.getElementById('nome');
+        const cognomeInput = document.getElementById('cognome');
+        const classeSelect = document.getElementById('classe');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        
+        const storedNome = localStorage.getItem('nome');
+        const storedCognome = localStorage.getItem('cognome');
+        const storedClasse = localStorage.getItem('classe');
+        const storedEmail = localStorage.getItem('email');
+        const storedPassword = localStorage.getItem('password');
+
+        
+        if (storedNome) nomeInput.value = storedNome;
+        if (storedCognome) cognomeInput.value = storedCognome;
+        if (storedClasse) classeSelect.value = storedClasse;
+        if (storedEmail) emailInput.value = storedEmail;
+        if (storedPassword) passwordInput.value = storedPassword;
+
+        
+        if (storedNome && storedCognome && storedClasse && storedEmail && storedPassword) {
+            form.submit();
+        }
+
+        
+        form.addEventListener('submit', (e) => {
+            localStorage.setItem('nome', nomeInput.value);
+            localStorage.setItem('cognome', cognomeInput.value);
+            localStorage.setItem('classe', classeSelect.value);
+            localStorage.setItem('email', emailInput.value);
+            localStorage.setItem('password', passwordInput.value);
+        });
+    </script>
+</body>
+
+</html>

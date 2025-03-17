@@ -1,0 +1,176 @@
+body {
+    display: flex;
+    margin: 0;
+    background-color: #ebece7;
+    color: #305778;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    transition: all 2s;
+    height: 100vh;
+}
+
+body>div {
+    flex-grow: 1;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+header,
+main,
+footer,
+table{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+
+header,
+footer {
+    border: 1px black solid;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+}
+
+h1,
+h4 {
+    text-align: center;
+    width: fit-content;
+    background-color: #305778;
+    border-radius: 40px;
+    color: white;
+    padding: 10px 20px;
+    margin-inline: auto;
+}
+
+h4 {
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+main {
+    max-width: 720px;
+    margin-block: 50px;
+
+}
+
+menu {
+    background-color: #305778;
+    margin: 0px;
+    color: white;
+    padding: 5px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+menu a, menu a:visited, menu a:hover, menu a:active {
+    color: white; 
+    text-decoration: none; 
+}
+
+
+div.columns {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+
+button {
+    color: #305778;
+    font-weight: bold;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    border: 2.5px solid rgb(49, 83, 125);
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-color: rgb(214, 215, 210);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d1d2ce;
+}
+
+
+input {
+    width: 45%;
+    color: #305778;
+    font-weight: bold;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid #305778;
+    margin-inline: auto;
+}
+
+form{
+    border: 1px black solid;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+form > input
+{
+    width: auto;
+    margin-block: 10px;
+    margin-inline: 10px;
+}
+
+form > input[type=submit] {
+    cursor: pointer;
+}
+
+
+#hamburger {
+    margin: 10px;
+    cursor: pointer;
+}
+
+#menubar{
+    visibility: hidden;
+    width: 0;
+}
+
+.contenitore_bottoni {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contenitore_bottoni button {
+    margin: 5px 0;
+    height: 140px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.container>div {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
